@@ -25,6 +25,15 @@ Step 4. Create a new database by creating .env.local file. Copy .env content to 
 ```bash
 DATABASE_URL="mysql://db_user:db_password@127.0.0.1:3306/db_name?serverVersion=5.7"
 ```
+Step 5. Launch server
+```bash
+symfony server:start
+```
+You can launch test by typing this following
+```bash
+php bin/phpunit --testdox
+```
+
 
 
 
