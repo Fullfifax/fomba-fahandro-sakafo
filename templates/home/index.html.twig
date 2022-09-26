@@ -3,20 +3,6 @@
 {% block title %}Homepage - FFS{% endblock %}
 
 {% block body %}
-    <h1 class="site-heading text-center text-faded d-lg-block">
-        <span class="site-heading-upper text-primary mb-3">Tongasoa eto @ fizarana ny fomba fandrahoana sakafo :)</span>
-    </h1>
-    <div class="container">
-        <div class="intro-left">
-            <div class="intro-text left-0 text-center bg-faded p-5 rounded">
-                <h2 class="section-heading mb-4">
-                    <span class="section-heading-upper text-big">Tia mahandro ? Tia mizara ?</span>
-                    <span class="section-heading-upper">Zarao amin'ireo namanao eto ny tsiambaratelon'ny fandrahoanao sakafo ;)</span>
-                </h2>
-                <div class="authentication-button">
-                    <div class="intro-button mx-auto"><a class="btn btn-primary btn-xl" href="#!">Hizara fomba fandrahoana sakafo</a></div>
-                    <div class="intro-button mx-auto"><a class="btn btn-primary btn-xl" href="#!">Hisoratra anarana</a></div>
-                </div>
-            </div>
-        </div>
+    {% include 'home/welcome.html.twig' %}
+    {% include 'home/recipes.html.twig' %}
 {% endblock %}
