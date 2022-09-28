@@ -20,9 +20,13 @@
         }
     </style>
     <body>
-        {% include '_partials/_nav.html.twig' %}
-        {% block body %}
-        {% endblock %}   
+    {% include '_partials/_nav.html.twig' %}
+        {% if app.user %}
+            {% block body %}{% endblock %} 
+        {% else %}
+            
+            {% block authenticate %}{% endblock %}
+        {% endif %}   
         {% include '_partials/_footer.html.twig' %}
     </body>
 </html>

@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Log in!{% endblock %}
+
+{% block authenticate %}
+<div class="row mx-auto">
+    <form method="post">
+        {% if error %}
+            <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+        {% endif %}
+
+        {% if app.user %}
+            <div class="mb-3">
+                You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
+            </div>
+        {% endif %}
+            <div class="col-md-4 mx-auto">
+                <h1 class="h3 mb-3 text-center text-primary mt-4">Hiditra eto @ FFS</h1>
+                <label for="inputEmail" class="text-primary">Email</label>
+                <input type="email" name="email" id="inputEmail" class="form-control" required autofocus>
+                <label for="inputPassword" class="text-primary">Hafatra miafina</label>
+                <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
+
+                <input type="hidden" name="_csrf_token"
+                    value="{{ csrf_token('authenticate') }}"
+                >
+            <button class="btn btn-lg btn-primary my-4 text-secondary w-100" type="submit">
+                Vita
+            </button>
+        </div>
+    </form>
+    <a href="{{ path('app_register') }}" class="mb-4 text-center">
+        Tsy manana kaonty ? Mamorona eto :)
+    </a>
+</div>
+{% endblock %}
