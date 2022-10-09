@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Add new recipe - FFS{% endblock %}
+
+{% block body %}
+<div class="row mx-auto">
+    <div class="col-md-4 mx-auto text-primary">
+        <h2 class="mt-3 text-primary text-center">Hizara FFS ;)</h2>
+        {{ form_start(recipesFormType) }}
+            {{ form_row(recipesFormType.name, {
+                label: 'Anaran\'ilay sakafo'
+            }) }}
+            {{ form_row(recipesFormType.ingredients, {
+                label: 'Zavatra ilaina'
+            }) }}
+            {{ form_row(recipesFormType.preparation, {
+                label: 'Fikarakarana azy'
+            }) }}
+            {{ form_row(recipesFormType.file, {
+                label: 'Sary na horonantsary'
+            }) }}
+            {{ form_row(recipesFormType.slug, {
+                label: 'Slug'
+            }) }}
+            <button type="submit" class="btn btn-primary my-4 w-100">Hampiditra FFS</button>
+        {{ form_end(recipesFormType) }}
+    </div>
+</div>
+{% endblock %}

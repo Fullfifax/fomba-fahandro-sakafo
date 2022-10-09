@@ -1,14 +1,14 @@
 <!-- Navbar --> 
 <nav class="navbar navbar-expand-lg navbar-dark py-lg-4 d-flex" id="mainNav">
     <div class="container">
-        <a class="navbar-brand text-uppercase fw-bold fw-italic d-lg-none" href="{{ path('app_home') }}">FFS</a>
+        <a class="navbar-brand text-uppercase fw-bold fw-italic d-lg-none" href="{{ path('app_recipes') }}">FFS</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-        <div class="collapse navbar-collapse d-flex" style="justify-content:space-between;" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse justify-content-between d-lg-none" id="navbarSupportedContent">
             <div class="nav-left">
                 <ul class="navbar-nav">
                     {% if app.user %}
-                        <li class="nav-item px-lg-4"><a class="navbar-brand text-uppercase fw-bold" href="{{ path('app_home') }}">FFS ;)</a></li>
-                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="#">Hampiditra FFS</a></li>
+                        <li class="nav-item px-lg-4"><a class="navbar-brand text-uppercase fw-bold" href="{{ path('app_recipes') }}">FFS ;)</a></li>
+                        <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="{{ path('app_add_recipe') }}">Hampiditra FFS</a></li>
                         <li class="nav-item px-lg-4"><a class="nav-link text-uppercase" href="#">Lisitry ny FFS</a></li>
                 </ul>
             </div>
